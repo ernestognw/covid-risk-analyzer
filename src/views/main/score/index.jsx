@@ -22,9 +22,10 @@ const Score = () => {
           style={{ padding: 20 }}
           strokeColor={{
             '70%': '#ff0000',
-            '0%': '#87d068',
+            '15%': '#87d068',
+            '45%': '#87d068',
           }}
-          percent={score}
+          percent={100}
           status={score === 100 ? 'exception' : undefined}
           format={(percent) => percent}
         />
