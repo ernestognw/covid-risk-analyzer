@@ -25,7 +25,7 @@ const Score = () => {
             '15%': '#87d068',
             '45%': '#87d068',
           }}
-          percent={100}
+          percent={score}
           status={score === 100 ? 'exception' : undefined}
           format={(percent) => percent}
         />
