@@ -3,19 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/colors": "^5.0.0",
+    "@ant-design/icons": "^4.3.0",
+    "@styled-system/prop-types": "^5.1.5",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.8.4",
+    "less": "^3.12.2",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "react-topbar-progress-indicator": "^4.1.0",
+    "shortid": "^2.2.16",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "rescripts start",
+    "build": "rescripts build"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +43,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@rescripts/cli": "^0.0.14",
+    "@rescripts/rescript-env": "^0.0.12",
+    "@rescripts/utilities": "^0.0.7",
+    "css-loader": "^5.0.1",
+    "less-loader": "^7.1.0",
+    "style-loader": "^2.0.0"
   }
 }
