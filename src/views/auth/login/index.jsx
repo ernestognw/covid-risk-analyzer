@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useUser } from '@providers/user';
 import { Card, Form, Input, Button, Typography } from 'antd';
 import { UserOutlined, MailOutlined } from '@ant-design/icons';
@@ -9,12 +10,14 @@ const { Title } = Typography;
 const Login = () => {
   const [logging, setLogging] = useState(false);
   const { setLogged, setUser } = useUser();
+  const { push } = useHistory();
 
   const onFinish = async (values) => {
     setLogging(true);
     setUser(values);
     setLogged(true);
     setLogging(false);
+    push('/questionnaire');
   };
 
   return (

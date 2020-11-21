@@ -1,10 +1,13 @@
 const getScore = {
   age: (age) => {
-    let relative = Math.floor((100 - 18) / (55 - 18));
+    let relative = Math.floor((age - 18) / (55 - 18));
+
+    if (relative > 1) relative = 1;
+    if (relative < 0) relative = 0;
 
     return Math.ceil(relative > 1 ? 1 : relative) * 15;
   },
-  sex: (sex) => (sex === 'male' ? 3 : 5),
+  sex: (sex) => (sex === 'male' ? 3 : sex === 'female' ? 5 : 0),
   countries: (countries) => Math.ceil(((countries?.length || 0) / 3) * 10),
   hadContact: (hadContact) => (hadContact ? 15 : 0),
   symptoms: (symptoms) => Math.ceil(((symptoms?.length || 0) / 7) * 4),

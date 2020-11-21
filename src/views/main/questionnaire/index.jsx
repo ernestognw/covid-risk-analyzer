@@ -9,6 +9,7 @@ import {
   Select,
   message,
 } from 'antd';
+import { useHistory } from 'react-router-dom';
 import { useUser } from '@providers/user';
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons';
 import Box from '@components/box';
@@ -18,10 +19,12 @@ const { Item } = Form;
 
 const Questionnaire = () => {
   const { setForm, form } = useUser();
+  const { push } = useHistory();
 
   const onFinish = (values) => {
     setForm(values);
     message.success('Se ha actualizado tu score');
+    push('/');
   };
 
   return (
